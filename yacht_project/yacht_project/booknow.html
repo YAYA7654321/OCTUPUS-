@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Login</title>
+    <link rel="stylesheet" href="/yacht_project/css/booknow.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <h2>Welcome Back</h2>
+            <p class="subtitle">Please login to your account</p>
+            
+            <form class="login-form" id="loginForm" method="POST" action="https://script.google.com/macros/s/AKfycbw0xJSvtenI3l70lTpQnAhrHFoAWqyv4HtgC9i7_S9UZSe0WVZh6wAvBVj7zT1TbMC3/exec">
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" name="username" id="username" placeholder="Username" required>
+                </div>
+                
+                <div class="input-group">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" name="email" id="email" placeholder="Email" required>
+                </div>
+                
+                <button type="submit" class="login-btn">
+                    <span>Send_info</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </form>
+            
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values directly from input elements
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const timestamp = new Date().toLocaleString();
+
+            // Create a hidden iframe for form submission
+            const iframe = document.createElement('iframe');
+            iframe.name = 'submitFrame';
+            iframe.style.display = 'none';
+            document.body.appendChild(iframe);
+
+            // Create a form inside the iframe
+            const form = document.createElement('form');
+            form.method = 'POST';
+            form.action = 'https://script.google.com/macros/s/AKfycbw0xJSvtenI3l70lTpQnAhrHFoAWqyv4HtgC9i7_S9UZSe0WVZh6wAvBVj7zT1TbMC3/exec';
+            form.target = 'submitFrame';
+
+            // Add form fields with explicit values
+            const fields = {
+                'username': username,
+                'email': email,
+                'timestamp': timestamp
+            };
+
+            // Add each field to the form
+            for (const [key, value] of Object.entries(fields)) {
+                const input = document.createElement('input');
+                input.type = 'hidden';
+                input.name = key;
+                input.value = value;
+                form.appendChild(input);
+            }
+
+            // Add the form to the iframe and submit
+            iframe.contentWindow.document.body.appendChild(form);
+            form.submit();
+
+            // Clean up after submission
+            setTimeout(() => {
+                document.body.removeChild(iframe);
+                alert('Send info successful!');
+            }, 1000);
+        });
+
+
+
+
+
+    </script>
+</body>
+</html>

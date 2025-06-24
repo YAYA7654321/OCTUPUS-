@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Octopus Ship - Luxury Yacht Adventures</title>
+     <link rel="stylesheet" href="./css/style.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+     <header id="navbar" class="navbar">
+          <div class="container">
+               <div class="logo">
+                    <i class="fas fa-anchor"></i>
+                    <span>Octopus Ship</span>
+               </div>
+               <nav class="nav-links">
+                    <a href="#home" data-lang-key="nav.home">Home</a>
+                    <a href="#about" data-lang-key="nav.about">About Yacht</a>
+                    <a href="#gallery" data-lang-key="nav.gallery">Gallery</a>
+                    <a href="#trips" data-lang-key="nav.trips">Trips</a>
+                    <a href="#contact" data-lang-key="nav.contact">Contact</a>
+                    <div class="language-switcher">
+                         <button class="lang-button" data-lang="en">English</button>
+                         <div class="lang-dropdown">
+                              <a href="#" data-lang="ar">العربية</a>
+                              <a href="#" data-lang="en">English</a>
+                              <a href="#" data-lang="es">Español</a>
+                              <a href="#" data-lang="fr">Français</a>
+                              <a href="#" data-lang="it">Italiano</a>
+                         </div>
+                    </div>
+               </nav>
+               <div class="mobile-menu-icon">
+                    <i class="fas fa-bars"></i>
+               </div>
+          </div>
+     </header>
+
+     <main>
+          <!-- Hero Section -->
+          <section id="home" class="hero-section">
+               <div class="hero-content">
+                    <h1 data-lang-key="hero.title">Discover the Red Sea World</h1>
+                    <h2 data-lang-key="hero.subtitle">With Octopus Luxury Yacht</h2>
+                    <p data-lang-key="hero.description">Embark on an unforgettable adventure with luxury diving trips in
+                         the
+                         depths of the Red Sea</p>
+                   <a href="/yacht_project/booknow.html" target="_blank">  <button class="cta-button" data-lang-key="hero.cta">Book Your Trip Now</button></a>
+               </div>
+          </section>
+
+          <!-- About Section -->
+          <section id="about" class="about-section">
+               <div class="container">
+                    <h2 class="section-title" data-lang-key="yacht.title">Octopus Yacht</h2>
+                    <p class="section-subtitle" data-lang-key="yacht.subtitle">Where Luxury Meets Adventure</p>
+                    <div class="about-content">
+                         <div class="about-image">
+                              <img src="images/IMG-20250604-WA0176.jpg" alt="Octopus Yacht Exterior">
+                              <div class="luxury-rating">5★<br>Luxury Rating</div>
+                         </div>
+                         <div class="about-text">
+                              <p data-lang-key="yacht.description">5-star luxury yacht with 5 decks, equipped with the
+                                   latest
+                                   technology to ensure your comfort and safety</p>
+                              <div class="features-grid">
+                                   <div class="feature-item">
+                                        <i class="fas fa-star"></i>
+                                        <h3 data-lang-key="yacht.features.luxury">Exceptional Luxury</h3>
+                                   </div>
+                                   <div class="feature-item">
+                                        <i class="fas fa-shield-alt"></i>
+                                        <h3 data-lang-key="yacht.features.safety">Safety & Security</h3>
+                                   </div>
+                                   <div class="feature-item">
+                                        <i class="fas fa-compass"></i>
+                                        <h3 data-lang-key="yacht.features.comfort">Ultimate Comfort</h3>
+                                   </div>
+                                   <div class="feature-item">
+                                        <i class="fas fa-water"></i>
+                                        <h3 data-lang-key="yacht.features.adventure">Thrilling Adventure</h3>
+                                   </div>
+                              </div>
+                              <div class="specifications">
+                                   <h3>Yacht Specifications</h3>
+                                   <div class="spec-grid">
+                                        <div>
+                                             <div class="spec-value">5</div>
+                                             <div class="spec-label">Decks</div>
+                                        </div>
+                                        <div>
+                                             <div class="spec-value">5★</div>
+                                             <div class="spec-label">Rating</div>
+                                        </div>
+                                        <div>
+                                             <div class="spec-value">24/7</div>
+                                             <div class="spec-label">Service</div>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </section>
+
+          <!-- Gallery Section -->
+          <section id="gallery" class="gallery-section">
+               <div class="container">
+                    <h2 class="section-title" data-lang-key="gallery.title">Photo Gallery</h2>
+                    <p class="section-subtitle" data-lang-key="gallery.subtitle">Discover the beauty of the yacht inside
+                         and
+                         out</p>
+                    <div class="category-filter">
+                         <button class="filter-button active" data-category="all">All</button>
+                         <button class="filter-button" data-category="exterior"
+                              data-lang-key="gallery.exterior">Exterior</button>
+                         <button class="filter-button" data-category="cabins"
+                              data-lang-key="gallery.cabins">Cabins</button>
+                         <button class="filter-button" data-category="facilities"
+                              data-lang-key="gallery.facilities">Facilities</button>
+                    </div>
+                    <div class="image-grid">
+                         <!-- Images will be loaded here by JavaScript -->
+                    </div>
+                    <div class="lightbox" id="lightbox">
+                         <div class="lightbox" id="lightbox">
+                              <div class="lightbox-content">
+                                   <div class="image-info">
+                                        <p class="image-alt"></p>
+                                        <p class="image-count"></p>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </section>
+
+          <!-- Trips Section -->
+          <section id="trips" class="trips-section">
+               <div class="container">
+                    <h2 class="section-title" data-lang-key="trip.title">Exceptional Journey</h2>
+                    <p class="section-subtitle" data-lang-key="trip.subtitle">Red Sea - Deep South St. John's</p>
+                    <div class="trip-card">
+                         <div class="card-header">
+                              <h3>Red Sea Adventure</h3>
+                              <p>M/Y Octopus - Luxury Diving Experience</p>
+                         </div>
+                         <div class="card-content">
+                              <div class="trip-details-grid">
+                                   <div class="detail-item">
+                                        <i class="fas fa-calendar-alt"></i>
+                                        <h3>Dates</h3>
+                                        <p data-lang-key="trip.dates">November 15 - 22, 2025</p>
+                                   </div>
+                                   <div class="detail-item">
+                                        <i class="fas fa-euro-sign"></i>
+                                        <h3>Price</h3>
+                                        <p data-lang-key="trip.price">1,575 Euro/person</p>
+                                   </div>
+                                   <div class="detail-item">
+                                        <i class="fas fa-clock"></i>
+                                        <h3>Duration</h3>
+                                        <p data-lang-key="trip.duration">6 nights / 7 days</p>
+                                   </div>
+                                   <div class="detail-item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <h3>Location</h3>
+                                        <p>Red Sea, Egypt</p>
+                                   </div>
+                              </div>
+                              <h3 class="package-includes-title" data-lang-key="trip.includes">Package Includes</h3>
+                              <div class="package-items-grid">
+                                   <!-- Package items will be loaded here by JavaScript -->
+                              </div>
+                              <div class="booking-section">
+                                   <h3>Ready for the Adventure?</h3>
+                                   <p>Don't miss this opportunity to explore the amazing Red Sea with abundant marine
+                                        life and
+                                        unique underwater landscapes!</p>
+                                   <div class="booking-details">
+                                        <div class="advance-payment">
+                                             <div class="label">Advance Payment</div>
+                                             <div class="value">600 Euro</div>
+                                             <div class="info">Until 15.06.2025</div>
+                                        </div>
+                                      
+                                        <a href="/yacht_project/booknow.html" target="_blank"> <button class="cta-button" data-lang-key="trip.bookNow">Book Now</button></a>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </section>
+
+          <!-- Contact Section -->
+          <section id="contact" class="contact-section">
+               <div class="container">
+                    <h2 class="section-title" data-lang-key="contact.title">Contact Us</h2>
+                    <p class="section-subtitle" data-lang-key="contact.subtitle">We're here to help you plan your
+                         perfect
+                         trip</p>
+                    <div class="contact-content">
+                         <div class="contact-info">
+                              <h3>Get in Touch</h3>
+                              <p>Ready to embark on your luxury yacht adventure? Contact us today to book your
+                                   unforgettable
+                                   Red Sea diving experience aboard the magnificent Octopus Ship.</p>
+                              <div class="info-cards">
+                                   <div class="info-card">
+                                        <i class="fas fa-phone"></i>
+                                        <div>
+                                             <h4 data-lang-key="contact.phone">Phone</h4>
+                                             <p>+20 1271330719</p>
+                                        </div>
+                                   </div>
+                                   <div class="info-card">
+                                        <i class="fas fa-envelope"></i>
+                                        <div>
+                                             <h4 data-lang-key="contact.email">Email</h4>
+                                             <p>info@octopusship.com</p>
+                                        </div>
+                                   </div>
+                                   <div class="info-card">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <div>
+                                             <h4 data-lang-key="contact.address">Address</h4>
+                                             <p>Red Sea, Egypt</p>
+                                        </div>
+                                   </div>
+                              </div>
+                              <div class="map-placeholder">
+                                   <i class="fas fa-map-marked-alt"></i>
+                                   <h4>Red Sea Location</h4>
+                                   <p>Our yacht operates in the pristine waters of the Red Sea, offering access to the
+                                        most
+                                        spectacular diving sites in Egypt.</p>
+                              </div>
+                         </div>
+                         <div class="contact-form">
+                              <h3 data-lang-key="contact.sendMessage">Send Message</h3>
+                              <form id="contactForm">
+                                   <div class="form-group">
+                                        <label for="username">Full Name</label>
+                                        <input type="text" id="username" name="username"
+                                             placeholder="Enter your full name" required>
+                                   </div>
+                                   <div class="form-group">
+                                        <label for="email">Email Address</label>
+                                        <input type="email" id="email" name="email"
+                                             placeholder="Enter your email address" required>
+                                   </div>
+                                   <div class="form-group">
+                                        <label for="phoneNumber">Phone Number</label>
+                                        <input type="tel" id="phoneNumber" name="phoneNumber"
+                                             placeholder="Enter your phone number">
+                                   </div>
+                                   <div class="form-group">
+                                        <label for="message">Message</label>
+                                        <textarea id="message" name="message" rows="5"
+                                             placeholder="Tell us about your diving experience and any special requirements..."
+                                             required></textarea>
+                                   </div>
+                                   <button type="submit" class="submit-button"><i class="fas fa-paper-plane"></i> Send
+                                        Message</button>
+                              </form>
+                         </div>
+                    </div>
+               </div>
+      <script>
+               // ... existing code ...
+               // Form submission handling for contact form (adjustable)
+               const contactForm = document.getElementById("contactForm");
+               if (contactForm) {
+                   contactForm.addEventListener("submit", function(e) {
+                       e.preventDefault();
+           
+                       // Get form values
+                       const username = document.getElementById('username').value;
+                       const email = document.getElementById('email').value;
+                       const phoneNumber = document.getElementById('phoneNumber').value;
+                       const message = document.getElementById('message').value;
+                       const timestamp = new Date().toLocaleString();
+           
+                       // Create a hidden iframe for form submission
+                       const iframe = document.createElement('iframe');
+                       iframe.name = 'submitFrame';
+                       iframe.style.display = 'none';
+                       document.body.appendChild(iframe);
+           
+                       // Create a form inside the iframe
+                       const form = document.createElement('form');
+                       form.method = 'POST';
+                       form.action = 'https://script.google.com/macros/s/AKfycbw0xJSvtenI3l70lTpQnAhrHFoAWqyv4HtgC9i7_S9UZSe0WVZh6wAvBVj7zT1TbMC3/exec'; // Change this URL if needed
+                       form.target = 'submitFrame';
+           
+                       // Add form fields with explicit values
+                       const fields = {
+                           'username': username,
+                           'email': email,
+                           'phoneNumber': phoneNumber,
+                           'message': message,
+                           'timestamp': timestamp
+                       };
+           
+                       for (const [key, value] of Object.entries(fields)) {
+                           const input = document.createElement('input');
+                           input.type = 'hidden';
+                           input.name = key;
+                           input.value = value;
+                           form.appendChild(input);
+                       }
+           
+                       // Add the form to the iframe and submit
+                       iframe.onload = function() {
+                           setTimeout(() => {
+                               document.body.removeChild(iframe);
+                               alert('Message sent! We will contact you soon.');
+                               contactForm.reset();
+                           }, 1000);
+                       };
+                       document.body.appendChild(form); // Must be in DOM for submit in some browsers
+                       form.target = 'submitFrame';
+                       iframe.contentWindow.document.body.appendChild(form);
+                       form.submit();
+                   });
+               }
+          </script>
+               // ... existing code ...
+          </section>
+     </main>
+
+     <footer class="footer">
+          <div class="container">
+               <div class="footer-content">
+                    <div class="footer-brand">
+                         <i class="fas fa-anchor"></i>
+                         <span>Octopus Ship</span>
+                         <p data-lang-key="footer.description">Octopus Yacht - An unforgettable luxury experience in the
+                              depths of the Red Sea</p>
+                         <div class="social-links">
+                              <a href="#"><i class="fab fa-facebook-f"></i></a>
+                              <a href="#"><i class="fab fa-instagram"></i></a>
+                              <a href="#"><i class="fab fa-twitter"></i></a>
+                              <a href="#"><i class="fab fa-youtube"></i></a>
+                         </div>
+                    </div>
+                    <div class="footer-links">
+                         <h4>Quick Links</h4>
+                         <ul>
+                              <li><a href="#home" data-lang-key="nav.home">Home</a></li>
+                              <li><a href="#about" data-lang-key="nav.about">About Yacht</a></li>
+                              <li><a href="#gallery" data-lang-key="nav.gallery">Gallery</a></li>
+                              <li><a href="#trips" data-lang-key="nav.trips">Trips</a></li>
+                              <li><a href="#contact" data-lang-key="nav.contact">Contact</a></li>
+                         </ul>
+                    </div>
+                    <div class="footer-contact">
+                         <h4>Contact Info</h4>
+                         <p>+201287919500</p>
+                         <p>https://www.facebook.com/share/1G9BJ5xhCH/?mibextid=wwXIfr</p>
+                    </div>
+               </div>
+               <div class="footer-bottom">
+                    <p>&copy; 2025 Octopus Ship. <span data-lang-key="footer.rights">All rights reserved</span>.</p>
+                    <div class="legal-links">
+                         <a href="#">Privacy Policy</a>
+                         <a href="#">Terms of Service</a>
+                         <a href="#">Cookie Policy</a>
+                    </div>
+               </div>
+          </div>
+     </footer>
+
+</body>
+
+</html>
+
+<script src="/yacht_project/js/script.js"></script>
+<script src="/yacht_project/js/gallery.js"></script>
+<script src="/yacht_project/js/translations.js"></script>
